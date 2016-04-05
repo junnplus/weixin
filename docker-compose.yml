@@ -1,0 +1,7 @@
+web:
+    extends:
+        file: docker-compose-common.yml
+        service: server
+    command: supervisord -c supervisord.conf 
+    environment:
+        - "WEIXIN_ENV=development"

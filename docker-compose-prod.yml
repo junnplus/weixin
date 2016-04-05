@@ -1,0 +1,7 @@
+web:
+    extends:
+        file: docker-compose-common.yml
+        service: server
+    command: gunicorn -w 4 manage:app -b 0.0.0.0:4000
+    environment:
+        - "WEIXIN_ENV=production"
