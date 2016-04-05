@@ -5,3 +5,4 @@ from flask import Blueprint
 bp = Blueprint('weixin', __name__)
 
 from .index import *  # noqa
+from .login import *  # noqa
