@@ -6,6 +6,7 @@ from flask import Flask
 
 from weixin.config import config
 from weixin.extensions import oauth
+from weixin.views import bp
 
 
 def configure_app(app):
@@ -18,7 +19,7 @@ def register_extensions(app):
 
 
 def register_blueprints(app):
-    pass
+    app.register_blueprint(bp)
 
 
 def create_app():
