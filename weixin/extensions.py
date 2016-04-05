@@ -4,8 +4,10 @@ from flask import session
 from werkzeug.urls import url_parse
 from werkzeug.urls import url_encode
 from flask_oauthlib.client import OAuth
+from raven.contrib.flask import Sentry
 
 oauth = OAuth()
+sentry = Sentry()
 
 weixin = oauth.remote_app(
     'weixin',

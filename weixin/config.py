@@ -25,7 +25,8 @@ class TestingConfig(Config):
 
 class ProductionConfig(Config):
 
-    pass
+    # SENTRY
+    SENTRY_DSN = 'https://3880902278bb48699e9cdd99aa2da7d5:a97e1346bdae42dca912ff90d6c8c3bd@app.getsentry.com/73089'  # noqa
 
 
 config = {
