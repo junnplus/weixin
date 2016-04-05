@@ -23,7 +23,7 @@ def index():
                           data={'openid': openid,
                                 'access_token': access_token})
         return jsonify(resp.data)
-    return redirect(url_for('login'))
+    return redirect(url_for('weixin.login'))
 
 
 @bp.route('/signature_verify')
