@@ -17,6 +17,7 @@ def login():
 @bp.route('/login/authorized')
 def authorized():
     resp = weixin.authorized_response()
-    if resp:
-        session['weixin_oauth'] = resp
+    if resp is None:
+        return 'Access denied', 401
+    session['weixin_oauth'] = resp
     return redirect(url_for('weixin.index'))
